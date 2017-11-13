@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace TextGenerator
 {
@@ -12,11 +9,14 @@ namespace TextGenerator
         static Random _rand = new Random();
         static void Main(string[] args)
         {
-            Generate _gen = new Generate(MaxLen, 100);
+            //second param number of files
+            Generate _gen = new Generate(MaxLen, 3);
             _gen.PutUrLogicHere = Logic;
             _gen.WriteFile();
         }
 
+
+        //put ur logic here
         static void Logic(StringBuilder Render)
         {
             Func<int, String> RetString = (inpParam) => { return
